@@ -36,7 +36,6 @@ class Container: UIView {
     func dropShadow() {
     
         layer.masksToBounds = false
-        //layer.shadowColor = UIColor.red_f().cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0);
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 6
@@ -45,5 +44,9 @@ class Container: UIView {
     
     func makeRadius() {
         contentView.layer.cornerRadius = 12
+    }
+    
+    class func calculateLeadingPoint(initialLeading: Int, width: Int, verticalSpace: Int, index: Int) -> Int {
+        return initialLeading + index*(width+verticalSpace)
     }
 }
