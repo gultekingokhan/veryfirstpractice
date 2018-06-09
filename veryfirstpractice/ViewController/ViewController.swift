@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Countries"
+        
         let nib = UINib(nibName: "CountryCell", bundle: nil)
         tableView?.register(nib, forCellReuseIdentifier: "CountryCell")
         
