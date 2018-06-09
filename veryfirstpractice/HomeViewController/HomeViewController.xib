@@ -39,6 +39,9 @@
                     <state key="normal" title="More Photos">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="showSearchScreen:" destination="-1" eventType="touchUpInside" id="F9d-Pk-i9g"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-Fh-1js">
                     <rect key="frame" x="20" y="40" width="335" height="50"/>

@@ -105,15 +105,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                                         height: Int(scrollView.frame.size.height))
     }
     
-    override func viewDidLayoutSubviews() {
-        /*
-        let calculatedLeading: Int = calculateLeadingPoint(initialLeading:leading,
-                                                           width: width,
-                                                           verticalSpace: space,
-                                                           index: (photos.count-1))
-        scrollView.contentSize = CGSize(width: calculatedLeading+width+leading,
-                                        height: Int(scrollView.frame.size.height-64))
-        */
+    @IBAction func showSearchScreen(_ sender: Any) {
+        let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        present(searchVC, animated: true, completion: nil)
     }
+   
 
 }
