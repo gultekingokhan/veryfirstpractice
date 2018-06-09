@@ -13,7 +13,6 @@
 		76657B2E20CC072500252283 /* Container.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B2D20CC072500252283 /* Container.xib */; };
 		76657B3420CC1BDA00252283 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B3220CC1BDA00252283 /* SearchViewController.swift */; };
 		76657B3520CC1BDA00252283 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B3320CC1BDA00252283 /* SearchViewController.xib */; };
-		76657B3720CC1E2E00252283 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B3620CC1E2E00252283 /* Constants.swift */; };
 		76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5C20CBEB98005896E2 /* AppDelegate.swift */; };
 		76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5E20CBEB98005896E2 /* ViewController.swift */; };
 		76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */; };
@@ -50,7 +49,6 @@
 		76657B2D20CC072500252283 /* Container.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Container.xib; sourceTree = "<group>"; };
 		76657B3220CC1BDA00252283 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		76657B3320CC1BDA00252283 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		76657B3620CC1E2E00252283 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76DADB5920CBEB98005896E2 /* veryfirstpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veryfirstpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DADB5C20CBEB98005896E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DADB5E20CBEB98005896E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		76DADB5B20CBEB98005896E2 /* veryfirstpractice */ = {
 			isa = PBXGroup;
 			children = (
-				76657B3620CC1E2E00252283 /* Constants.swift */,
 				76DADB5C20CBEB98005896E2 /* AppDelegate.swift */,
 				76657B3120CC1BBE00252283 /* SearchViewController */,
 				76657B2A20CC055D00252283 /* ContainerView */,
@@ -337,7 +334,6 @@
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
-				76657B3720CC1E2E00252283 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
