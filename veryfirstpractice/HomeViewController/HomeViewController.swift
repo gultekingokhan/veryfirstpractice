@@ -19,6 +19,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     let height: Int  = 320
     let count  = 5
 
+    @IBAction func presentSearchScreen(_ sender: Any) {
+        
+        let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        present(searchVC, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

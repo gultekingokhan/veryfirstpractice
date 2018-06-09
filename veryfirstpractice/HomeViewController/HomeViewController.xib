@@ -22,20 +22,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btx-qS-bls">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="537"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="fPo-YV-yjE"/>
                     </connections>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3y-vx-Eub">
+                    <rect key="frame" x="120" y="597" width="135" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MTz-hJ-TRb"/>
+                        <constraint firstAttribute="width" constant="135" id="hHU-iM-R3k"/>
+                    </constraints>
+                    <state key="normal" title="Add more countries"/>
+                    <connections>
+                        <action selector="presentSearchScreen:" destination="-1" eventType="touchUpInside" id="6BC-uB-gu2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="btx-qS-bls" secondAttribute="bottom" id="FMk-dU-LKb"/>
+                <constraint firstItem="h3y-vx-Eub" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XVN-jt-zeT"/>
+                <constraint firstItem="h3y-vx-Eub" firstAttribute="top" secondItem="btx-qS-bls" secondAttribute="bottom" constant="40" id="b8e-qT-raI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="btx-qS-bls" secondAttribute="trailing" id="eGK-24-OGM"/>
                 <constraint firstItem="btx-qS-bls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h4W-i8-e0G"/>
                 <constraint firstItem="btx-qS-bls" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kVz-xF-EMt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="h3y-vx-Eub" secondAttribute="bottom" constant="40" id="yIF-iR-BQe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

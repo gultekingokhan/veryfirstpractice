@@ -11,6 +11,9 @@
 		76657B2720CC052A00252283 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B2520CC052A00252283 /* HomeViewController.xib */; };
 		76657B2C20CC05F400252283 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B2B20CC05F400252283 /* Container.swift */; };
 		76657B2E20CC072500252283 /* Container.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B2D20CC072500252283 /* Container.xib */; };
+		76657B3420CC1BDA00252283 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B3220CC1BDA00252283 /* SearchViewController.swift */; };
+		76657B3520CC1BDA00252283 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B3320CC1BDA00252283 /* SearchViewController.xib */; };
+		76657B3720CC1E2E00252283 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B3620CC1E2E00252283 /* Constants.swift */; };
 		76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5C20CBEB98005896E2 /* AppDelegate.swift */; };
 		76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5E20CBEB98005896E2 /* ViewController.swift */; };
 		76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */; };
@@ -45,6 +48,9 @@
 		76657B2520CC052A00252283 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		76657B2B20CC05F400252283 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		76657B2D20CC072500252283 /* Container.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Container.xib; sourceTree = "<group>"; };
+		76657B3220CC1BDA00252283 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		76657B3320CC1BDA00252283 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		76657B3620CC1E2E00252283 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76DADB5920CBEB98005896E2 /* veryfirstpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veryfirstpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DADB5C20CBEB98005896E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DADB5E20CBEB98005896E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,15 @@
 			path = ContainerView;
 			sourceTree = "<group>";
 		};
+		76657B3120CC1BBE00252283 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76657B3220CC1BDA00252283 /* SearchViewController.swift */,
+				76657B3320CC1BDA00252283 /* SearchViewController.xib */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
 		76DADB5020CBEB98005896E2 = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +153,9 @@
 		76DADB5B20CBEB98005896E2 /* veryfirstpractice */ = {
 			isa = PBXGroup;
 			children = (
+				76657B3620CC1E2E00252283 /* Constants.swift */,
 				76DADB5C20CBEB98005896E2 /* AppDelegate.swift */,
+				76657B3120CC1BBE00252283 /* SearchViewController */,
 				76657B2A20CC055D00252283 /* ContainerView */,
 				76DADB8D20CBEF09005896E2 /* CountryCell */,
 				76657B2920CC055000252283 /* ViewController */,
@@ -288,6 +305,7 @@
 				76657B2E20CC072500252283 /* Container.xib in Resources */,
 				76DADB9320CBF1C8005896E2 /* ViewController.xib in Resources */,
 				76DADB6720CBEB9A005896E2 /* Assets.xcassets in Resources */,
+				76657B3520CC1BDA00252283 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,11 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				76657B2620CC052A00252283 /* HomeViewController.swift in Sources */,
+				76657B3420CC1BDA00252283 /* SearchViewController.swift in Sources */,
 				76657B2C20CC05F400252283 /* Container.swift in Sources */,
 				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
+				76657B3720CC1E2E00252283 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
