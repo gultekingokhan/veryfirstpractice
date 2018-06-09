@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5C20CBEB98005896E2 /* AppDelegate.swift */; };
 		76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5E20CBEB98005896E2 /* ViewController.swift */; };
-		76DADB6220CBEB98005896E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DADB6020CBEB98005896E2 /* Main.storyboard */; };
 		76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */; };
 		76DADB6720CBEB9A005896E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DADB6620CBEB9A005896E2 /* Assets.xcassets */; };
 		76DADB6A20CBEB9A005896E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */; };
 		76DADB7520CBEB9A005896E2 /* veryfirstpracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB7420CBEB9A005896E2 /* veryfirstpracticeTests.swift */; };
 		76DADB8020CBEB9A005896E2 /* veryfirstpracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB7F20CBEB9A005896E2 /* veryfirstpracticeUITests.swift */; };
+		76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB8E20CBEF58005896E2 /* CountryCell.swift */; };
+		76DADB9120CBEF58005896E2 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DADB8F20CBEF58005896E2 /* CountryCell.xib */; };
+		76DADB9320CBF1C8005896E2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DADB9220CBF1C8005896E2 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		76DADB5920CBEB98005896E2 /* veryfirstpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veryfirstpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DADB5C20CBEB98005896E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DADB5E20CBEB98005896E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76DADB6120CBEB98005896E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76DADB6420CBEB98005896E2 /* veryfirstpractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = veryfirstpractice.xcdatamodel; sourceTree = "<group>"; };
 		76DADB6620CBEB9A005896E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76DADB6920CBEB9A005896E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		76DADB7B20CBEB9A005896E2 /* veryfirstpracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = veryfirstpracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DADB7F20CBEB9A005896E2 /* veryfirstpracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = veryfirstpracticeUITests.swift; sourceTree = "<group>"; };
 		76DADB8120CBEB9A005896E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76DADB8E20CBEF58005896E2 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		76DADB8F20CBEF58005896E2 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		76DADB9220CBF1C8005896E2 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,10 @@
 		76DADB5B20CBEB98005896E2 /* veryfirstpractice */ = {
 			isa = PBXGroup;
 			children = (
+				76DADB8D20CBEF09005896E2 /* CountryCell */,
 				76DADB5C20CBEB98005896E2 /* AppDelegate.swift */,
 				76DADB5E20CBEB98005896E2 /* ViewController.swift */,
-				76DADB6020CBEB98005896E2 /* Main.storyboard */,
+				76DADB9220CBF1C8005896E2 /* ViewController.xib */,
 				76DADB6620CBEB9A005896E2 /* Assets.xcassets */,
 				76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */,
 				76DADB6B20CBEB9A005896E2 /* Info.plist */,
@@ -126,6 +131,15 @@
 				76DADB8120CBEB9A005896E2 /* Info.plist */,
 			);
 			path = veryfirstpracticeUITests;
+			sourceTree = "<group>";
+		};
+		76DADB8D20CBEF09005896E2 /* CountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				76DADB8E20CBEF58005896E2 /* CountryCell.swift */,
+				76DADB8F20CBEF58005896E2 /* CountryCell.xib */,
+			);
+			path = CountryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DADB9120CBEF58005896E2 /* CountryCell.xib in Resources */,
 				76DADB6A20CBEB9A005896E2 /* LaunchScreen.storyboard in Resources */,
+				76DADB9320CBF1C8005896E2 /* ViewController.xib in Resources */,
 				76DADB6720CBEB9A005896E2 /* Assets.xcassets in Resources */,
-				76DADB6220CBEB98005896E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
@@ -297,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76DADB6020CBEB98005896E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76DADB6120CBEB98005896E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
