@@ -14,6 +14,7 @@ import SDWebImage
 class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var morePhotosButton: UIButton!
     var container = Container()
     var photos = [Photo]()
     var cards = [Container]()
@@ -28,8 +29,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         width = Int(UIScreen.main.bounds.size.width) - 2 * leading
-//        height = Int(UIScreen.main.bounds.size.height-64) - 2 * leading
-
+        height = Int(UIScreen.main.bounds.size.height) - 2 * leading - 60 - 110
+        
+        morePhotosButton.dropShadow()
+        morePhotosButton.layer.cornerRadius = 12
+        
         getPhotos()
         
     }
@@ -57,7 +61,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                                                                        index: index)
                     
                     let container = Container(frame: CGRect(x:calculatedLeading,
-                                                            y: self.leading,
+                                                            y: 0,
                                                             width: self.width,
                                                             height: self.height))
                     
@@ -98,7 +102,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                                                            verticalSpace: space,
                                                            index: (photos.count-1))
         scrollView.contentSize = CGSize(width: calculatedLeading+width+leading,
-                                        height: Int(scrollView.frame.size.height-64))
+                                        height: Int(scrollView.frame.size.height))
     }
     
     override func viewDidLayoutSubviews() {

@@ -15,6 +15,8 @@
 		76C1C88120CC653800680A21 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C88020CC653800680A21 /* Model.swift */; };
 		76C1C88320CC656700680A21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C88220CC656700680A21 /* Constants.swift */; };
 		76C1C88620CC694600680A21 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C88520CC694600680A21 /* Photo.swift */; };
+		76C1C88A20CC784D00680A21 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C88820CC784D00680A21 /* SearchViewController.swift */; };
+		76C1C88B20CC784D00680A21 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C1C88920CC784D00680A21 /* SearchViewController.xib */; };
 		76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5C20CBEB98005896E2 /* AppDelegate.swift */; };
 		76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB5E20CBEB98005896E2 /* ViewController.swift */; };
 		76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */; };
@@ -54,6 +56,8 @@
 		76C1C88020CC653800680A21 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		76C1C88220CC656700680A21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76C1C88520CC694600680A21 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		76C1C88820CC784D00680A21 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		76C1C88920CC784D00680A21 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		76DADB5920CBEB98005896E2 /* veryfirstpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veryfirstpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DADB5C20CBEB98005896E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DADB5E20CBEB98005896E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,15 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		76C1C88720CC783A00680A21 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76C1C88820CC784D00680A21 /* SearchViewController.swift */,
+				76C1C88920CC784D00680A21 /* SearchViewController.xib */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
 		76DADB5020CBEB98005896E2 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 				76DADB8D20CBEF09005896E2 /* CountryCell */,
 				76657B2920CC055000252283 /* ViewController */,
 				76657B2820CC052E00252283 /* HomeViewController */,
+				76C1C88720CC783A00680A21 /* SearchViewController */,
 				76DADB6620CBEB9A005896E2 /* Assets.xcassets */,
 				76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */,
 				76DADB6B20CBEB9A005896E2 /* Info.plist */,
@@ -339,6 +353,7 @@
 				76657B2E20CC072500252283 /* Container.xib in Resources */,
 				76DADB9320CBF1C8005896E2 /* ViewController.xib in Resources */,
 				76DADB6720CBEB9A005896E2 /* Assets.xcassets in Resources */,
+				76C1C88B20CC784D00680A21 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C1C88A20CC784D00680A21 /* SearchViewController.swift in Sources */,
 				76C1C88120CC653800680A21 /* Model.swift in Sources */,
 				76657B2620CC052A00252283 /* HomeViewController.swift in Sources */,
 				76657B2C20CC05F400252283 /* Container.swift in Sources */,

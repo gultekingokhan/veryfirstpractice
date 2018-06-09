@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="veryfirstpractice" customModuleProvider="target">
             <connections>
+                <outlet property="morePhotosButton" destination="YOV-WQ-H5e" id="1Yh-Du-bjQ"/>
                 <outlet property="scrollView" destination="btx-qS-bls" id="60B-yx-1h2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,21 +22,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btx-qS-bls">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btx-qS-bls">
+                    <rect key="frame" x="0.0" y="110" width="375" height="437"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="fPo-YV-yjE"/>
                     </connections>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOV-WQ-H5e">
+                    <rect key="frame" x="30" y="577" width="315" height="60"/>
+                    <color key="backgroundColor" red="0.0039215686274509803" green="0.70196078431372544" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="8KE-7l-d18"/>
+                        <constraint firstAttribute="height" constant="60" id="YUZ-qw-zuP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                    <state key="normal" title="More Photos">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-Fh-1js">
+                    <rect key="frame" x="20" y="40" width="335" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JFl-Wr-CyM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="44"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="btx-qS-bls" secondAttribute="bottom" id="FMk-dU-LKb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OPu-Fh-1js" secondAttribute="trailing" constant="20" id="6LF-dh-Oou"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YOV-WQ-H5e" secondAttribute="trailing" constant="30" id="8mi-5y-XYT"/>
+                <constraint firstItem="YOV-WQ-H5e" firstAttribute="top" secondItem="btx-qS-bls" secondAttribute="bottom" constant="30" id="F1B-95-s1u"/>
+                <constraint firstItem="btx-qS-bls" firstAttribute="top" secondItem="OPu-Fh-1js" secondAttribute="bottom" constant="20" id="dWo-cJ-eeO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="btx-qS-bls" secondAttribute="trailing" id="eGK-24-OGM"/>
                 <constraint firstItem="btx-qS-bls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h4W-i8-e0G"/>
-                <constraint firstItem="btx-qS-bls" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kVz-xF-EMt"/>
+                <constraint firstItem="OPu-Fh-1js" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="mI9-S7-1kD"/>
+                <constraint firstItem="OPu-Fh-1js" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ohA-Lc-LeD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YOV-WQ-H5e" secondAttribute="bottom" constant="30" id="wab-ZK-1D2"/>
+                <constraint firstItem="YOV-WQ-H5e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ypE-MU-zHJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-91" y="52"/>
         </view>
     </objects>
 </document>
