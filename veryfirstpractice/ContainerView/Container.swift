@@ -11,6 +11,7 @@ import UIKit
 class Container: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,5 +46,11 @@ class Container: UIView {
     
     func makeRadius() {
         contentView.layer.cornerRadius = 12
+        contentView.layer.masksToBounds = true
+        imageView.layer.masksToBounds = true
     }
+    
+    //        imageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+    //        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    //        imageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
 }

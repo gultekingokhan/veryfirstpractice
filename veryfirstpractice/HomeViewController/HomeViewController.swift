@@ -7,61 +7,109 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SDWebImage
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    var container = Container()
+    var photos = [Photo]()
+    var cards = [Container]()
     
     //constants
     let leading: Int  = 30
     let space: Int  = 30
-    let width: Int  = 200
-    let height: Int  = 320
-    let count  = 5
+    var width: Int  = 200
+    var height: Int  = 420
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for x in 0..<count {
-            
-            let calculatedLeading: Int = calculateLeadingPoint(initialLeading: leading,
-                                                                 width: width,
-                                                                 verticalSpace: space,
-                                                                 index: x)
+        width = Int(UIScreen.main.bounds.size.width) - 2 * leading
+//        height = Int(UIScreen.main.bounds.size.height-64) - 2 * leading
 
-            let container = Container(frame: CGRect(x:calculatedLeading,
-                                                    y: leading,
-                                                    width: width,
-                                                    height: height))
+        getPhotos()
+        
+    }
 
-            scrollView.addSubview(container)
+    func getPhotos() {
+        
+        let constants = Constants()
+        let url = constants.unsplash_curead_photos_ready_url
+        
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+
+            var index = 0
+
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                for object in json.arrayValue {
+                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue)
+                    self.photos.append(photo)
+
+                    
+                    let calculatedLeading: Int = self.calculateLeadingPoint(initialLeading: self.leading,
+                                                                       width: self.width,
+                                                                       verticalSpace: self.space,
+                                                                       index: index)
+                    
+                    let container = Container(frame: CGRect(x:calculatedLeading,
+                                                            y: self.leading,
+                                                            width: self.width,
+                                                            height: self.height))
+                    
+                    container.imageView.sd_setImage(with: URL(string: photo.url), completed: nil)
+
+                    self.cards.append(container)
+                    
+                    self.scrollView.addSubview(container)
+                    
+                    index += 1
+
+                    
+                }
+                
+                self.setContentSizeForScrollView()
+                
+            case .failure(let error):
+                print(error)
+            }
         }
-        
-
-
-        
-//        imageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-//        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-//        imageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-      
+    
     }
     
+    func updateCard(photo: Photo, index: Int) {
+        let card: Container = cards[index]
+        card.imageView.sd_setImage(with: URL(string: photo.url), completed: nil)
+
+    }
+
+
     func calculateLeadingPoint(initialLeading: Int, width: Int, verticalSpace: Int, index: Int) -> Int {
-        
-        //It has not to be CGFloat type anymore, yay!
-        //Edited: It has to be Int now, shit.
-        //Edited: We will turn back here later.
         return initialLeading + index*(width+verticalSpace)
     }
     
-    override func viewDidLayoutSubviews() {
-        
+    func setContentSizeForScrollView() {
         let calculatedLeading: Int = calculateLeadingPoint(initialLeading:leading,
                                                            width: width,
                                                            verticalSpace: space,
-                                                           index: (count-1))
+                                                           index: (photos.count-1))
         scrollView.contentSize = CGSize(width: calculatedLeading+width+leading,
                                         height: Int(scrollView.frame.size.height-64))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        /*
+        let calculatedLeading: Int = calculateLeadingPoint(initialLeading:leading,
+                                                           width: width,
+                                                           verticalSpace: space,
+                                                           index: (photos.count-1))
+        scrollView.contentSize = CGSize(width: calculatedLeading+width+leading,
+                                        height: Int(scrollView.frame.size.height-64))
+        */
     }
 
 }
