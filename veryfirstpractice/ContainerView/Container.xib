@@ -13,18 +13,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Container" customModule="veryfirstpractice" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="Vln-9p-s2Y" id="v7g-Xk-KAu"/>
+                <outlet property="imageView" destination="EF6-yo-gXq" id="Ogf-UV-Ctf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Vln-9p-s2Y">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+            <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EF6-yo-gXq">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Dft-KZ-LV4" firstAttribute="bottom" secondItem="EF6-yo-gXq" secondAttribute="bottom" id="2qM-hN-4aB"/>
+                <constraint firstItem="EF6-yo-gXq" firstAttribute="top" secondItem="Dft-KZ-LV4" secondAttribute="top" id="NzS-hz-EkA"/>
+                <constraint firstItem="EF6-yo-gXq" firstAttribute="trailing" secondItem="Dft-KZ-LV4" secondAttribute="trailing" id="aXP-5k-1y8"/>
+                <constraint firstItem="EF6-yo-gXq" firstAttribute="leading" secondItem="Dft-KZ-LV4" secondAttribute="leading" id="eJc-bi-UII"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Dft-KZ-LV4"/>
-            <point key="canvasLocation" x="-590" y="-416"/>
+            <point key="canvasLocation" x="-623" y="-467"/>
         </view>
     </objects>
 </document>

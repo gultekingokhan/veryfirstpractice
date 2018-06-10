@@ -11,6 +11,7 @@ import UIKit
 class Container: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,21 +33,26 @@ class Container: UIView {
         dropShadow()
         makeRadius()
     }
-
-    func dropShadow() {
     
+    func makeRadius() {
+        contentView.layer.cornerRadius = 12
+        contentView.layer.masksToBounds = true
+        imageView.layer.masksToBounds = true
+    }
+    
+    //        imageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+    //        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    //        imageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+}
+
+extension UIView {
+    
+    func dropShadow() {
+        
         layer.masksToBounds = false
         layer.shadowOffset = CGSize(width: 0, height: 0);
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 6
         
-    }
-    
-    func makeRadius() {
-        contentView.layer.cornerRadius = 12
-    }
-    
-    class func calculateLeadingPoint(initialLeading: Int, width: Int, verticalSpace: Int, index: Int) -> Int {
-        return initialLeading + index*(width+verticalSpace)
     }
 }

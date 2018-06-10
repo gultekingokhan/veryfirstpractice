@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.setNavigationBarHidden(true, animated: true)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
