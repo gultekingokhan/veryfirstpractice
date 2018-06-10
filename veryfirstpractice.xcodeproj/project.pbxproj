@@ -11,6 +11,8 @@
 		7651865420CDBCE3007924A4 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865320CDBCE3007924A4 /* ShadowedButton.swift */; };
 		7651865620CDC459007924A4 /* CVScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865520CDC459007924A4 /* CVScrollView.swift */; };
 		7651865820CDC968007924A4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865720CDC968007924A4 /* Parser.swift */; };
+		7651865B20CDCC68007924A4 /* SearchContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865A20CDCC68007924A4 /* SearchContainerView.swift */; };
+		7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865D20CDCFFD007924A4 /* VFTableView.swift */; };
 		76657B2620CC052A00252283 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B2420CC052A00252283 /* HomeViewController.swift */; };
 		76657B2720CC052A00252283 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B2520CC052A00252283 /* HomeViewController.xib */; };
 		76657B2C20CC05F400252283 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B2B20CC05F400252283 /* Container.swift */; };
@@ -54,6 +56,8 @@
 		7651865320CDBCE3007924A4 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedButton.swift; sourceTree = "<group>"; };
 		7651865520CDC459007924A4 /* CVScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVScrollView.swift; sourceTree = "<group>"; };
 		7651865720CDC968007924A4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		7651865A20CDCC68007924A4 /* SearchContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContainerView.swift; sourceTree = "<group>"; };
+		7651865D20CDCFFD007924A4 /* VFTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFTableView.swift; sourceTree = "<group>"; };
 		76657B2420CC052A00252283 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		76657B2520CC052A00252283 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		76657B2B20CC05F400252283 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				7651865320CDBCE3007924A4 /* ShadowedButton.swift */,
 				7651865520CDC459007924A4 /* CVScrollView.swift */,
+				7651865A20CDCC68007924A4 /* SearchContainerView.swift */,
+				7651865D20CDCFFD007924A4 /* VFTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,8 +440,10 @@
 				76C1C88620CC694600680A21 /* Photo.swift in Sources */,
 				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
+				7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				7651865820CDC968007924A4 /* Parser.swift in Sources */,
+				7651865B20CDCC68007924A4 /* SearchContainerView.swift in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
 				7651865420CDBCE3007924A4 /* ShadowedButton.swift in Sources */,
 				76C1C88320CC656700680A21 /* Constants.swift in Sources */,

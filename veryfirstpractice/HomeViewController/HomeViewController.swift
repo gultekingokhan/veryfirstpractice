@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         Parser.getPhotos(success: { (photos) in
             self.scrollView.createCards(photos: photos)
         }) { (error) in
-            print("Error: \(String(describing: error?.localizedDescription))")
+            //Show alert
         }
     }
 
