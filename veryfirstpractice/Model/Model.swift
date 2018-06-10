@@ -17,14 +17,14 @@ class Model {
         var photosArray = [Photo]()
         let constants = Constants()
         
-        let url = constants.unsplash_curead_photos_ready_url
+        let url = constants.unsplash_curetad_photos_ready_url
         
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 for object in json.arrayValue {
-                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue)
+                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue, description: "")
                     photosArray.append(photo)
                 }
             case .failure(let error):

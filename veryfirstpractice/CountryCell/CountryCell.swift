@@ -11,9 +11,17 @@ import UIKit
 class CountryCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        containerView.dropShadow()
+//        containerView.layer.cornerRadius = 12
+        
+        photoView.layer.masksToBounds = true
+//        containerView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

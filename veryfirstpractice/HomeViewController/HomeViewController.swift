@@ -41,7 +41,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     func getPhotos() {
         
         let constants = Constants()
-        let url = constants.unsplash_curead_photos_ready_url
+        let url = constants.unsplash_curetad_photos_ready_url
         
         Alamofire.request(url, method: .get).validate().responseJSON { response in
 
@@ -51,7 +51,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             case .success(let value):
                 let json = JSON(value)
                 for object in json.arrayValue {
-                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue)
+                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue, description: object["description"].stringValue)
                     self.photos.append(photo)
 
                     

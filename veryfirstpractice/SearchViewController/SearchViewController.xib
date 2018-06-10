@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="searchContainerView" destination="PAl-nb-FEh" id="rgw-lO-Cy7"/>
                 <outlet property="searchTextField" destination="ru2-FU-bhq" id="hM7-Hl-g7Y"/>
+                <outlet property="tableView" destination="zsS-fc-mUy" id="aPb-b0-QRU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,22 +35,54 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="IqD-Jq-37z"/>
+                            </connections>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGR-sP-vuu">
+                            <rect key="frame" x="286" y="15" width="37" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="37" id="keK-d1-6yw"/>
+                                <constraint firstAttribute="height" constant="30" id="qL1-Ud-cjE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                            <state key="normal" title="close">
+                                <color key="titleColor" red="0.0039215686274509803" green="0.70196078431372544" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="fIe-j7-qT0"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="53X-Rh-bFT"/>
                         <constraint firstItem="ru2-FU-bhq" firstAttribute="leading" secondItem="PAl-nb-FEh" secondAttribute="leading" constant="10" id="D3Y-zI-cjP"/>
                         <constraint firstItem="ru2-FU-bhq" firstAttribute="centerY" secondItem="PAl-nb-FEh" secondAttribute="centerY" id="XT9-hk-aUg"/>
+                        <constraint firstAttribute="trailing" secondItem="vGR-sP-vuu" secondAttribute="trailing" constant="12" id="YXu-aE-kRc"/>
                         <constraint firstAttribute="trailing" secondItem="ru2-FU-bhq" secondAttribute="trailing" constant="30" id="jOm-US-mvd"/>
+                        <constraint firstItem="vGR-sP-vuu" firstAttribute="centerY" secondItem="PAl-nb-FEh" secondAttribute="centerY" id="z3U-uu-WZP"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" estimatedSectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="zsS-fc-mUy">
+                    <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="G6z-8z-QEF"/>
+                        <outlet property="delegate" destination="-1" id="4Az-fc-sDa"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="PAl-nb-FEh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ji2-RY-uDc"/>
+                <constraint firstItem="zsS-fc-mUy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sir-Ja-YwZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PAl-nb-FEh" secondAttribute="trailing" constant="20" id="T7a-iW-3mS"/>
                 <constraint firstItem="PAl-nb-FEh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="W8S-Sg-TWs"/>
+                <constraint firstItem="zsS-fc-mUy" firstAttribute="top" secondItem="PAl-nb-FEh" secondAttribute="bottom" id="h2s-FJ-T22"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zsS-fc-mUy" secondAttribute="trailing" id="kz2-Sn-UtZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zsS-fc-mUy" secondAttribute="bottom" id="wvA-pb-GMo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

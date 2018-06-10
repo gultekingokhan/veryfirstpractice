@@ -22,14 +22,12 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EF6-yo-gXq">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="QfH-k9-CKF"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Dft-KZ-LV4" firstAttribute="bottom" secondItem="EF6-yo-gXq" secondAttribute="bottom" id="2qM-hN-4aB"/>
                 <constraint firstItem="EF6-yo-gXq" firstAttribute="top" secondItem="Dft-KZ-LV4" secondAttribute="top" id="NzS-hz-EkA"/>
                 <constraint firstItem="EF6-yo-gXq" firstAttribute="trailing" secondItem="Dft-KZ-LV4" secondAttribute="trailing" id="aXP-5k-1y8"/>
                 <constraint firstItem="EF6-yo-gXq" firstAttribute="leading" secondItem="Dft-KZ-LV4" secondAttribute="leading" id="eJc-bi-UII"/>

@@ -12,6 +12,7 @@ class Photo {
     
     private var _url: String!
     private var _id: String!
+    private var _description: String!
     
     var url: String {
         return _url
@@ -21,9 +22,14 @@ class Photo {
         return _id
     }
     
-    init(id: String, url: String) {
+    var description: String {
+        return _description
+    }
+    
+    init(id: String, url: String, description: String) {
         _id = id
         _url = url
+        _description = description
     }
     
 }
