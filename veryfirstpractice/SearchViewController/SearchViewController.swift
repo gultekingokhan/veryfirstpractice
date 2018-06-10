@@ -11,55 +11,21 @@ import SDWebImage
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var photos = [Photo]()
-    @IBOutlet weak var tableView: UITableView?
-    
-    @IBOutlet weak var searchContainerView: UIView!
+    @IBOutlet weak var tableView: VFTableView?
+    @IBOutlet weak var searchContainerView: SearchContainerView!
     @IBOutlet weak var searchTextField: UITextField!
-    
-    override func viewWillAppear(_ animated: Bool) {
-         //searchTextField.becomeFirstResponder()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        searchContainerView.dropShadow()
-        searchContainerView.layer.cornerRadius = 8
-        
-        let nib = UINib(nibName: "CountryCell", bundle: nil)
-        tableView?.register(nib, forCellReuseIdentifier: "CountryCell")
-        
-        tableView?.contentInset = UIEdgeInsetsMake(0, 0, 20, 0)
-        
-        searchPhotos(text: "random")
-    }
     
-    func searchPhotos(text: String) {
+        tableView?.registerNib(string: "CountryCell")
         
-        photos = []
-        
-        let constants = Constants()
-        let url: String = String(constants.searchPhotosURL(query: text, page: 1))
-        
-        print("URL: \(url)")
-            
-        Alamofire.request(url, method: .get).validate().responseJSON { response in
-            
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                
-                for object in json["results"].arrayValue {
-                    
-                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue, description: object["description"].stringValue)
-                    self.photos.append(photo)
-                    
-                    self.tableView?.reloadData()
-                }
-                
-            case .failure(let error):
-                print(error)
-            }
+        Parser.searchPhotos(query: "random", success: { (photosResult) in
+
+            self.photos = photosResult
+            self.tableView?.reloadData()
+        }) { (error) in
+            //Show alert
         }
     }
     
@@ -79,11 +45,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 200
     }
     
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text as NSString? {
             let txtAfterUpdate = text.replacingCharacters(in: range, with: string)
-            searchPhotos(text: txtAfterUpdate)
+            
+            //MUST: Don't forget to clean photos array before calling this function.
+            Parser.searchPhotos(query: txtAfterUpdate, success: { (photosResult) in
+                self.photos = photosResult
+                self.tableView?.reloadData()
+            }) { (error) in
+                //Show alert
+            }
         }
         return true
     }
