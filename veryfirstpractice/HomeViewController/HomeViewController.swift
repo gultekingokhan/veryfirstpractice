@@ -25,6 +25,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var width: Int  = 200
     var height: Int  = 420
 
+    @IBAction func presentSearchScreen(_ sender: Any) {
+        let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        present(searchVC, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +103,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     func setContentSizeForScrollView() {
         let calculatedLeading: Int = calculateLeadingPoint(initialLeading:leading,
+
                                                            width: width,
                                                            verticalSpace: space,
                                                            index: (photos.count-1))

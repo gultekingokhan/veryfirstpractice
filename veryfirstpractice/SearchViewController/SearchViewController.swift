@@ -3,10 +3,7 @@
 //  veryfirstpractice
 //
 //  Created by Gokhan Gultekin on 10.06.2018.
-//  Copyright © 2018 Gokhan. All rights reserved.
-//
 
-import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
@@ -104,5 +101,3 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView?.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 }
-
-
