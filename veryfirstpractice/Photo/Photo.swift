@@ -31,7 +31,12 @@ class Photo {
     init(id: String?, url: String?, description: String?) {
         _id = id!
         _url = url!
-        _description = description!
+        
+        if description == nil || description?.count == 0 {
+            _description = "There is no description for this photo."
+        } else {
+            _description = description!
+        }
     }
     
     /*
