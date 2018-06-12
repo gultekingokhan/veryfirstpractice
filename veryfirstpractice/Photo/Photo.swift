@@ -12,9 +12,9 @@ import SwiftyJSON
 
 class Photo {
     
-    private var _url: String!
-    private var _id: String!
-    private var _description: String!
+    private var _url: String
+    private var _id: String
+    private var _description: String
     
     var url: String {
         return _url
@@ -28,10 +28,10 @@ class Photo {
         return _description
     }
     
-    init(id: String, url: String, description: String) {
-        _id = id
-        _url = url
-        _description = description
+    init(id: String?, url: String?, description: String?) {
+        _id = id!
+        _url = url!
+        _description = description!
     }
     
     /*

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4FA57BE7EC5EF9DAF8ECE6AD /* Pods_veryfirstpractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100F256854A74D877E41E5CB /* Pods_veryfirstpractice.framework */; };
+		764636D920D0144A00641B3A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764636D720D0144A00641B3A /* DetailViewController.swift */; };
+		764636DA20D0144A00641B3A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764636D820D0144A00641B3A /* DetailViewController.xib */; };
+		764636DC20D017CC00641B3A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764636DB20D017CC00641B3A /* BackButton.swift */; };
 		7651865420CDBCE3007924A4 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865320CDBCE3007924A4 /* ShadowedButton.swift */; };
 		7651865620CDC459007924A4 /* CVScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865520CDC459007924A4 /* CVScrollView.swift */; };
 		7651865820CDC968007924A4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865720CDC968007924A4 /* Parser.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		100F256854A74D877E41E5CB /* Pods_veryfirstpractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veryfirstpractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2913425EC12E5D3B9D0B1426 /* Pods-veryfirstpractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfirstpractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veryfirstpractice/Pods-veryfirstpractice.debug.xcconfig"; sourceTree = "<group>"; };
+		764636D720D0144A00641B3A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		764636D820D0144A00641B3A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		764636DB20D017CC00641B3A /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		7651865320CDBCE3007924A4 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedButton.swift; sourceTree = "<group>"; };
 		7651865520CDC459007924A4 /* CVScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVScrollView.swift; sourceTree = "<group>"; };
 		7651865720CDC968007924A4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -120,6 +126,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		764636D620D0143800641B3A /* DetailViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				764636D720D0144A00641B3A /* DetailViewController.swift */,
+				764636D820D0144A00641B3A /* DetailViewController.xib */,
+			);
+			path = DetailViewContoller;
+			sourceTree = "<group>";
+		};
 		7651865220CDBCC4007924A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +142,7 @@
 				7651865520CDC459007924A4 /* CVScrollView.swift */,
 				7651865A20CDCC68007924A4 /* SearchContainerView.swift */,
 				7651865D20CDCFFD007924A4 /* VFTableView.swift */,
+				764636DB20D017CC00641B3A /* BackButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 				76657B2820CC052E00252283 /* HomeViewController */,
 				76C1C88720CC783A00680A21 /* SearchViewController */,
 				76DADB6620CBEB9A005896E2 /* Assets.xcassets */,
+				764636D620D0143800641B3A /* DetailViewContoller */,
 				76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */,
 				76DADB6B20CBEB9A005896E2 /* Info.plist */,
 				76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */,
@@ -362,6 +379,7 @@
 				76DADB9120CBEF58005896E2 /* CountryCell.xib in Resources */,
 				76DADB6A20CBEB9A005896E2 /* LaunchScreen.storyboard in Resources */,
 				76657B2720CC052A00252283 /* HomeViewController.xib in Resources */,
+				764636DA20D0144A00641B3A /* DetailViewController.xib in Resources */,
 				76657B2E20CC072500252283 /* Container.xib in Resources */,
 				76DADB9320CBF1C8005896E2 /* ViewController.xib in Resources */,
 				76DADB6720CBEB9A005896E2 /* Assets.xcassets in Resources */,
@@ -441,10 +459,12 @@
 				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
 				7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */,
+				764636DC20D017CC00641B3A /* BackButton.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				7651865820CDC968007924A4 /* Parser.swift in Sources */,
 				7651865B20CDCC68007924A4 /* SearchContainerView.swift in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
+				764636D920D0144A00641B3A /* DetailViewController.swift in Sources */,
 				7651865420CDBCE3007924A4 /* ShadowedButton.swift in Sources */,
 				76C1C88320CC656700680A21 /* Constants.swift in Sources */,
 			);
