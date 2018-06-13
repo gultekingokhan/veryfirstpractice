@@ -1,5 +1,12 @@
 language: objective-c
 osx_image: xcode9.3
 
-before_install: "git submodule init && git submodule update && sudo gem update --system && sudo gem install bundler && bundle install"
-script: "bundle exec rake test --trace"
+before_install:
+  - git submodule update --init --recursive
+  - brew update || brew update
+  - brew outdated xctool || brew upgrade xctool
+
+script:
+  - rake test:ios
+  - rake test:osx
+  - rake test:xctool:ios
