@@ -6,5 +6,4 @@ before_install:
    - pod install
 
 script: 
-    - xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-    - xctool test -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - xcodebuild clean build -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests CODE_SIGNING_REQUIRED=NO
