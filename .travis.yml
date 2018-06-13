@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode9.3
 
 before_install:
-   - rvm use system
-   - sudo gem install cocoapods -v '1.5.3'
+   - gem install cocoapods
+   - pod install
 
 script: 
     - xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
