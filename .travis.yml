@@ -7,4 +7,4 @@ before_install:
 
 script: 
   - xcodebuild clean build -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice CODE_SIGNING_REQUIRED=NO
-  - xcodebuild build-for-testing -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -destination generic/platform=iOS
+  - xcodebuild build-for-testing -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice CODE_SIGNING_REQUIRED=NO
