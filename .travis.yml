@@ -4,6 +4,9 @@ osx_image: xcode9.3
 before_install:
    - gem install cocoapods
    - pod install
+   - brew update
+   - brew outdated xctool || brew upgrade xctool
 
 script: 
-   - xcodebuild -scheme "veryfirstpractice" -destination 'platform=iOS Simulator,name=iPhone 7 Plus,OS=11.0'-destination 'platform=iOS Simulator,name=iPhone 7 Plus,OS=10.3' build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+   - xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+   - xctool test -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
