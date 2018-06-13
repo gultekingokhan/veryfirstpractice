@@ -8,4 +8,4 @@ before_install:
 - sudo gem install cocoapods
 
 script:
-  xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice build -sdk iphonesimulator
+  xctool -project veryfirstpractice.xcodeproj -scheme veryfirstpractice build -sdk iphonesimulator
