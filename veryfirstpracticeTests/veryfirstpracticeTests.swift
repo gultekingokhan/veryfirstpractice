@@ -34,7 +34,7 @@ class veryfirstpracticeTests: XCTestCase {
     }
     
     func test_backbuttonSized() {
-        let width = 12
+        let width = 13
         let height = 12
         
         XCTAssertEqual(width, height, "Width is not equal to height")
