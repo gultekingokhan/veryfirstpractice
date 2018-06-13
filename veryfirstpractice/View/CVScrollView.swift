@@ -11,8 +11,8 @@ import UIKit
 class CVScrollView: UIScrollView {
 
     //constants
-    let leading: Int  = 30, space: Int  = 30
-    var width: Int  = 200, height: Int  = 420
+    let leading: Int = 30, space: Int = 30
+    var width: Int = 200, height: Int = 420
     
     override func awakeFromNib() {
         width = Int(UIScreen.main.bounds.size.width) - 2 * leading
@@ -42,7 +42,7 @@ class CVScrollView: UIScrollView {
         let calculatedLeading: Int = self.calculateLeadingPoint(initialLeading: self.leading,
                                                                 width: self.width,
                                                                 verticalSpace: self.space,
-                                                                index: index)
+                                                                index: index-1)
         contentSize = CGSize(width: calculatedLeading+width+leading,
                              height: Int(frame.size.height))
         

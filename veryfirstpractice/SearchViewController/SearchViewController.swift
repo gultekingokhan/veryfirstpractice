@@ -72,4 +72,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func textFieldDidBeginEditing(_ textField: UITextField) {
         tableView?.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        detailVC.photo = photos[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

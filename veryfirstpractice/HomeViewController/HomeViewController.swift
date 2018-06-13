@@ -28,6 +28,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBAction func moreButtonPressed(_ sender: Any) {
         let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        present(searchVC, animated: true, completion: nil)
+        let nc = UINavigationController(rootViewController: searchVC)
+        nc.navigationBar.isHidden = true
+        present(nc, animated: true, completion: nil)
     }
 }
