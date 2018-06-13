@@ -3,7 +3,9 @@ osx_image: xcode9.3
 
 before_install:
    - rvm use system
-   - sudo gem install cocoapods -v '1.5.3'  
+   - sudo gem install cocoapods -v '1.5.3'
 
 script: 
-   - ./bin/tests
+    - xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - xctool test -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
