@@ -55,7 +55,18 @@ class Parser {
                 
                 for object in json["results"].arrayValue {
                     
-                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue, description: object["description"].stringValue)
+                    let artist = Artist(id: object["user"]["id"].stringValue,
+                                        username: object["user"]["username"].stringValue,
+                                        profileImageURL: object["user"]["profile_image"]["medium"].stringValue)
+                    artist.firstname = object["user"]["first_name"].stringValue
+                    artist.lastname = object["user"]["last_name"].stringValue
+                    
+                    let photo = Photo(id: object["id"].stringValue,
+                                      url: object["urls"]["regular"].stringValue,
+                                      description: object["description"].stringValue)
+                    
+                    photo.artist = artist
+                    
                     photos.append(photo)
                 }
                 

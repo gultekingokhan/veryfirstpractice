@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4FA57BE7EC5EF9DAF8ECE6AD /* Pods_veryfirstpractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100F256854A74D877E41E5CB /* Pods_veryfirstpractice.framework */; };
+		7623C87E20D0FB150036EF8B /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623C87D20D0FB150036EF8B /* Artist.swift */; };
+		7623C88020D0FDBB0036EF8B /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623C87F20D0FDBB0036EF8B /* ShadowedView.swift */; };
+		7623C88220D1024A0036EF8B /* RoundendImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623C88120D1024A0036EF8B /* RoundendImageView.swift */; };
 		764636D920D0144A00641B3A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764636D720D0144A00641B3A /* DetailViewController.swift */; };
 		764636DA20D0144A00641B3A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764636D820D0144A00641B3A /* DetailViewController.xib */; };
 		764636DC20D017CC00641B3A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764636DB20D017CC00641B3A /* BackButton.swift */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		100F256854A74D877E41E5CB /* Pods_veryfirstpractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veryfirstpractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2913425EC12E5D3B9D0B1426 /* Pods-veryfirstpractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfirstpractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veryfirstpractice/Pods-veryfirstpractice.debug.xcconfig"; sourceTree = "<group>"; };
+		7623C87D20D0FB150036EF8B /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		7623C87F20D0FDBB0036EF8B /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
+		7623C88120D1024A0036EF8B /* RoundendImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundendImageView.swift; sourceTree = "<group>"; };
 		764636D720D0144A00641B3A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		764636D820D0144A00641B3A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		764636DB20D017CC00641B3A /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 				7651865A20CDCC68007924A4 /* SearchContainerView.swift */,
 				7651865D20CDCFFD007924A4 /* VFTableView.swift */,
 				764636DB20D017CC00641B3A /* BackButton.swift */,
+				7623C87F20D0FDBB0036EF8B /* ShadowedView.swift */,
+				7623C88120D1024A0036EF8B /* RoundendImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			children = (
 				76C1C88520CC694600680A21 /* Photo.swift */,
 				7651865720CDC968007924A4 /* Parser.swift */,
+				7623C87D20D0FB150036EF8B /* Artist.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -455,16 +464,19 @@
 				76C1C88A20CC784D00680A21 /* SearchViewController.swift in Sources */,
 				76657B2620CC052A00252283 /* HomeViewController.swift in Sources */,
 				76657B2C20CC05F400252283 /* Container.swift in Sources */,
+				7623C88220D1024A0036EF8B /* RoundendImageView.swift in Sources */,
 				76C1C88620CC694600680A21 /* Photo.swift in Sources */,
 				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
 				7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */,
 				764636DC20D017CC00641B3A /* BackButton.swift in Sources */,
+				7623C88020D0FDBB0036EF8B /* ShadowedView.swift in Sources */,
 				76DADB6520CBEB98005896E2 /* veryfirstpractice.xcdatamodeld in Sources */,
 				7651865820CDC968007924A4 /* Parser.swift in Sources */,
 				7651865B20CDCC68007924A4 /* SearchContainerView.swift in Sources */,
 				76DADB5D20CBEB98005896E2 /* AppDelegate.swift in Sources */,
 				764636D920D0144A00641B3A /* DetailViewController.swift in Sources */,
+				7623C87E20D0FB150036EF8B /* Artist.swift in Sources */,
 				7651865420CDBCE3007924A4 /* ShadowedButton.swift in Sources */,
 				76C1C88320CC656700680A21 /* Constants.swift in Sources */,
 			);

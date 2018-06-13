@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,9 +15,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="veryfirstpractice" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="sOu-dY-oIn" id="rcz-ID-eZ6"/>
+                <outlet property="fullnameLabel" destination="70O-Rz-tLg" id="Ffh-t2-sqN"/>
                 <outlet property="photoView" destination="knd-5t-MGU" id="Ktv-FT-8ye"/>
                 <outlet property="userImageView" destination="Mdu-ZM-6TA" id="5MP-6a-XRm"/>
-                <outlet property="usernameLabel" destination="70O-Rz-tLg" id="7Au-DU-boF"/>
+                <outlet property="usernameLabel" destination="3oa-CZ-fq9" id="bQb-H2-ZJU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -61,31 +64,44 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-xx-V0y">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-xx-V0y" customClass="ShadowedView" customModule="veryfirstpractice" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-ZM-6TA">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-ZM-6TA" customClass="RoundedImageView" customModule="veryfirstpractice" customModuleProvider="target">
                             <rect key="frame" x="16" y="16" width="48" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="48" id="dM7-9W-fcI"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70O-Rz-tLg">
-                            <rect key="frame" x="72" y="30" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullname Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70O-Rz-tLg">
+                            <rect key="frame" x="72" y="22" width="223" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="nxs-Cs-egD"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oa-CZ-fq9">
+                            <rect key="frame" x="72" y="43" width="223" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="ohh-ZH-CJT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.96527777777777779" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="1nC-xV-M0B"/>
                         <constraint firstItem="Mdu-ZM-6TA" firstAttribute="leading" secondItem="6bv-xx-V0y" secondAttribute="leading" constant="16" id="5RH-1C-CXC"/>
+                        <constraint firstItem="3oa-CZ-fq9" firstAttribute="leading" secondItem="70O-Rz-tLg" secondAttribute="leading" id="Fep-bx-Wee"/>
                         <constraint firstAttribute="bottom" secondItem="Mdu-ZM-6TA" secondAttribute="bottom" constant="16" id="NY6-Dc-eAC"/>
-                        <constraint firstItem="70O-Rz-tLg" firstAttribute="centerY" secondItem="6bv-xx-V0y" secondAttribute="centerY" id="Snt-TV-cag"/>
+                        <constraint firstAttribute="trailing" secondItem="70O-Rz-tLg" secondAttribute="trailing" constant="80" id="Qx4-hX-nok"/>
+                        <constraint firstItem="3oa-CZ-fq9" firstAttribute="firstBaseline" secondItem="70O-Rz-tLg" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Ri7-bm-aTd"/>
+                        <constraint firstItem="3oa-CZ-fq9" firstAttribute="trailing" secondItem="70O-Rz-tLg" secondAttribute="trailing" id="frD-YE-rox"/>
+                        <constraint firstItem="70O-Rz-tLg" firstAttribute="top" secondItem="Mdu-ZM-6TA" secondAttribute="top" constant="6" id="xV2-eb-5Zm"/>
                         <constraint firstItem="70O-Rz-tLg" firstAttribute="leading" secondItem="Mdu-ZM-6TA" secondAttribute="trailing" constant="8" id="yye-ym-YLT"/>
                         <constraint firstItem="Mdu-ZM-6TA" firstAttribute="top" secondItem="6bv-xx-V0y" secondAttribute="top" constant="16" id="zEZ-eA-lEO"/>
                     </constraints>

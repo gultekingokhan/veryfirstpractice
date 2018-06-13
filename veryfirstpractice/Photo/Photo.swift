@@ -28,42 +28,18 @@ class Photo {
         return _description
     }
     
-    init(id: String?, url: String?, description: String?) {
-        _id = id!
-        _url = url!
-        
+    var artist: Artist?
+    
+    init(id: String, url: String?, description: String?) {
+        _id = id
+        _url = url ?? ""
+
         if description == nil || description?.count == 0 {
             _description = "There is no description for this photo."
         } else {
             _description = description!
         }
     }
-    
-    /*
-    func photos() -> [Photo] {
-        
-        var photosArray = [Photo]()
-        let constants = Constants()
-        
-        let url = constants.unsplash_curetad_photos_ready_url
-        
-        Alamofire.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                for object in json.arrayValue {
-                    let photo = Photo(id: object["id"].stringValue, url: object["urls"]["regular"].stringValue, description: "")
-                    photosArray.append(photo)
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
-        return photosArray
-    }
-    */
-    
     
     /*It might be helpful
      func testingFunction(param1: String,

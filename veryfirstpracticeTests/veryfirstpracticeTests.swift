@@ -39,4 +39,18 @@ class veryfirstpracticeTests: XCTestCase {
         
         XCTAssertEqual(width, height, "Width is not equal to height")
     }
+    
+    func test_photoObjectNilOrNot() {
+        
+        let photo = Photo(id: "1234", url: nil, description: nil)
+        XCTAssertNotNil(photo.url, "Photo URL has not to be nil.")
+        XCTAssertNotNil(photo.description, "Photo description has not to be nil.")
+    }
+    
+    func test_artistObjectNilOrNot() {
+        
+        let artist = Artist(id: "1234", username: nil, profileImageURL: nil)
+        XCTAssertNotNil(artist.username, "Artist username has not to be nil.")
+        XCTAssertNotNil(artist.profileImageURL, "Artist avatar URL has not to be nil.")
+    }
 }
