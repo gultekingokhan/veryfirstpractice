@@ -8,4 +8,4 @@ before_install:
 - sudo gem install cocoapods
 
 script:
-  xctool -project veryfirstpractice.xcodeproj -scheme veryfirstpractice build -sdk iphonesimulator
+  xcodebuild clean test -project veryfirstpractice.xcodeproj -scheme veryfirstpractice -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
