@@ -6,5 +6,5 @@ before_install:
    - sudo gem install cocoapods -v '1.5.3'  
 
 script: 
-  - xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xctool test -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild clean build -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice CODE_SIGNING_REQUIRED=NO
+  - xcodebuild clean test -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice CODE_SIGNING_REQUIRED=NO
