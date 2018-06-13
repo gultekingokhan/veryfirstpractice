@@ -8,4 +8,4 @@ before_install:
    - brew outdated xctool || brew upgrade xctool
 
 script: 
-    - xcodebuild clean build -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpracticeTests CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean build -sdk iphonesimulator -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice CODE_SIGNING_REQUIRED=NO
