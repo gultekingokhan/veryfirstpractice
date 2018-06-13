@@ -9,5 +9,3 @@ before_install:
 
 script:
 xctool -workspace veryfirstpractice.xcworkspace -scheme veryfirstpractice build -sdk iphonesimulator
-
-# hi guys
