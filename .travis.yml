@@ -6,4 +6,4 @@ before_install:
    - pod install
 
 script: 
-   - xcodebuild test -workspace veryfirstpractice.xcworkspace -scheme "veryfirstpractice" -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' CODE_SIGNING_REQUIRED=NO
+   - xcodebuild test -workspace veryfirstpractice.xcworkspace -scheme "veryfirstpractice" -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -skip-testing:veryfirstpracticeUITests CODE_SIGNING_REQUIRED=NO
