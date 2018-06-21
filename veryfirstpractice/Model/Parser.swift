@@ -21,6 +21,8 @@ class Parser {
         
         let constants = Constants()
         let url = constants.unsplash_curetad_photos_ready_url
+        print("Mock getPhotos URL: \(url)")
+        
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             
             switch response.result {
@@ -47,6 +49,8 @@ class Parser {
 
         let constants = Constants()
         let url: String = String(constants.searchPhotosURL(query: query, page: 1))
+        print("Mock searchPhotos URL: \(url)")
+
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             
             switch response.result {
