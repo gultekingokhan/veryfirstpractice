@@ -17,10 +17,10 @@
 		7651865620CDC459007924A4 /* CVScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865520CDC459007924A4 /* CVScrollView.swift */; };
 		7651865B20CDCC68007924A4 /* SearchContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865A20CDCC68007924A4 /* SearchContainerView.swift */; };
 		7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651865D20CDCFFD007924A4 /* VFTableView.swift */; };
-		7654923320DB91A500A45EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654923220DB91A400A45EBA /* Constants.swift */; };
 		7654923A20DB91CF00A45EBA /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654923720DB91CF00A45EBA /* Artist.swift */; };
 		7654923B20DB91CF00A45EBA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654923820DB91CF00A45EBA /* Photo.swift */; };
 		7654923C20DB91CF00A45EBA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654923920DB91CF00A45EBA /* Parser.swift */; };
+		7654923E20DB977700A45EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654923D20DB977700A45EBA /* Constants.swift */; };
 		76657B2620CC052A00252283 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B2420CC052A00252283 /* HomeViewController.swift */; };
 		76657B2720CC052A00252283 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76657B2520CC052A00252283 /* HomeViewController.xib */; };
 		76657B2C20CC05F400252283 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76657B2B20CC05F400252283 /* Container.swift */; };
@@ -68,10 +68,10 @@
 		7651865520CDC459007924A4 /* CVScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVScrollView.swift; sourceTree = "<group>"; };
 		7651865A20CDCC68007924A4 /* SearchContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContainerView.swift; sourceTree = "<group>"; };
 		7651865D20CDCFFD007924A4 /* VFTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFTableView.swift; sourceTree = "<group>"; };
-		7654923220DB91A400A45EBA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7654923720DB91CF00A45EBA /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		7654923820DB91CF00A45EBA /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7654923920DB91CF00A45EBA /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		7654923D20DB977700A45EBA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76657B2420CC052A00252283 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		76657B2520CC052A00252283 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		76657B2B20CC05F400252283 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				76DADB5C20CBEB98005896E2 /* AppDelegate.swift */,
-				7654923220DB91A400A45EBA /* Constants.swift */,
+				7654923D20DB977700A45EBA /* Constants.swift */,
 				7654923620DB91CF00A45EBA /* Model */,
 				7651865220CDBCC4007924A4 /* View */,
 				76657B2A20CC055D00252283 /* ContainerView */,
@@ -461,13 +461,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7651865620CDC459007924A4 /* CVScrollView.swift in Sources */,
+				7654923E20DB977700A45EBA /* Constants.swift in Sources */,
 				76C1C88A20CC784D00680A21 /* SearchViewController.swift in Sources */,
 				76657B2620CC052A00252283 /* HomeViewController.swift in Sources */,
 				76657B2C20CC05F400252283 /* Container.swift in Sources */,
 				7623C88220D1024A0036EF8B /* RoundendImageView.swift in Sources */,
 				76DADB9020CBEF58005896E2 /* CountryCell.swift in Sources */,
 				76DADB5F20CBEB98005896E2 /* ViewController.swift in Sources */,
-				7654923320DB91A500A45EBA /* Constants.swift in Sources */,
 				7651865E20CDCFFD007924A4 /* VFTableView.swift in Sources */,
 				764636DC20D017CC00641B3A /* BackButton.swift in Sources */,
 				7623C88020D0FDBB0036EF8B /* ShadowedView.swift in Sources */,
