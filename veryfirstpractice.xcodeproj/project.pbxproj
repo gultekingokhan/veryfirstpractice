@@ -182,13 +182,14 @@
 			path = ContainerView;
 			sourceTree = "<group>";
 		};
-		76C1C88420CC693E00680A21 /* Photo */ = {
+		76C1C88420CC693E00680A21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				76C1C88520CC694600680A21 /* Photo.swift */,
 				7651865720CDC968007924A4 /* Parser.swift */,
 				7623C87D20D0FB150036EF8B /* Artist.swift */,
 			);
+			name = Model;
 			path = Photo;
 			sourceTree = "<group>";
 		};
@@ -229,7 +230,7 @@
 				76DADB5C20CBEB98005896E2 /* AppDelegate.swift */,
 				76C1C88220CC656700680A21 /* Constants.swift */,
 				7651865220CDBCC4007924A4 /* View */,
-				76C1C88420CC693E00680A21 /* Photo */,
+				76C1C88420CC693E00680A21 /* Model */,
 				76657B2A20CC055D00252283 /* ContainerView */,
 				76DADB8D20CBEF09005896E2 /* CountryCell */,
 				76657B2920CC055000252283 /* ViewController */,

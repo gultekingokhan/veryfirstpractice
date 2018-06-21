@@ -11,13 +11,20 @@ import XCTest
 
 class veryfirstpracticeTests: XCTestCase {
     
+    var sessionUnderTest: URLSession!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        //Initialize the SUT object
+        sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
+        sessionUnderTest = nil
+        
         super.tearDown()
     }
     
@@ -52,5 +59,37 @@ class veryfirstpracticeTests: XCTestCase {
         let artist = Artist(id: "1234", username: nil, profileImageURL: nil)
         XCTAssertNotNil(artist.username, "Artist username has not to be nil.")
         XCTAssertNotNil(artist.profileImageURL, "Artist avatar URL has not to be nil.")
+    }
+    
+    func test_unsplashGetPhotosHTTPStatusCode200() {
+        //given
+        let constants = Constants()
+        let url = URL(string: constants.unsplash_curetad_photos_ready_url)
+        XCTAssertNotNil(url, "URL is nil")
+        
+        let promise = expectation(description: "Completion handler invoked")
+        var statusCode: Int?
+        var responseError: Error?
+        //when
+        if url != nil {
+            
+            let dataTask = sessionUnderTest.dataTask(with: url!) { (data, response, error) in
+                
+                XCTAssertNotNil(response, "Response object is nil")
+                
+                statusCode = (response as! HTTPURLResponse).statusCode
+                responseError = error
+                
+                promise.fulfill()
+            }
+            dataTask.resume()
+            
+            waitForExpectations(timeout: 5, handler: nil)
+            
+            //then
+            XCTAssertNil(responseError)
+            XCTAssertEqual(statusCode, 200)
+            
+        }
     }
 }

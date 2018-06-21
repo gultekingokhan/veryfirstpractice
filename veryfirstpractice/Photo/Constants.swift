@@ -28,7 +28,14 @@ class Constants {
         return pureURL.encodeUrl()!
     }
     
-
+    /*  Mock URLs
+        https://api.unsplash.com/photos/curated?client_id=e0897a040edfc6eab3ada63a7be08b74c9a148701f867d29955a5544cad5e85e
+        https://api.unsplash.com/search/photos?client_id=e0897a040edfc6eab3ada63a7be08b74c9a148701f867d29955a5544cad5e85e&page=1&query=random
+    */
+    
+    /*  Test from command line
+        xcodebuild test -workspace veryfirstpractice.xcworkspace -scheme "veryfirstpractice" -destination 'platform=iOS Simulator,name=iPhone 8,OS=latest'
+    */
 }
 
 extension String
