@@ -60,7 +60,7 @@ class veryfirstpracticeTests: XCTestCase {
         XCTAssertNotNil(artist.username, "Artist username has not to be nil.")
         XCTAssertNotNil(artist.profileImageURL, "Artist avatar URL has not to be nil.")
     }
-    
+    /*
     func test_unsplashGetPhotosHTTPStatusCode200() {
         //given
         let constants = Constants()
@@ -87,4 +87,5 @@ class veryfirstpracticeTests: XCTestCase {
             XCTAssertEqual(statusCode, 200)
         }
     }
+     */
 }
