@@ -72,24 +72,19 @@ class veryfirstpracticeTests: XCTestCase {
         var responseError: Error?
         //when
         if url != nil {
-            
             let dataTask = sessionUnderTest.dataTask(with: url!) { (data, response, error) in
-                
                 XCTAssertNotNil(response, "Response object is nil")
                 
                 statusCode = (response as! HTTPURLResponse).statusCode
                 responseError = error
-                
                 promise.fulfill()
             }
             dataTask.resume()
-            
             waitForExpectations(timeout: 5, handler: nil)
             
             //then
             XCTAssertNil(responseError)
             XCTAssertEqual(statusCode, 200)
-            
         }
     }
 }
