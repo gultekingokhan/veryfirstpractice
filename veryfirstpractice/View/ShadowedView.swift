@@ -11,6 +11,7 @@ import UIKit
 class ShadowedView: UIView {
 
     override func awakeFromNib() {
+        layer.cornerRadius = frame.size.width/2
         dropShadow()
     }
 

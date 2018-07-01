@@ -7,6 +7,7 @@
 import Alamofire
 import SwiftyJSON
 import SDWebImage
+import Hero
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
@@ -14,10 +15,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: VFTableView?
     @IBOutlet weak var searchContainerView: SearchContainerView!
     @IBOutlet weak var searchTextField: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        searchContainerView.hero.id = "containerView"
+
         tableView?.registerNib(string: "CountryCell")
         
         Parser.searchPhotos(query: "random", success: { (photosResult) in
@@ -38,6 +41,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let photo: Photo = photos[indexPath.row]
         cell.photoView.sd_setImage(with: URL(string: photo.url), completed: nil)
         
+        cell.hero.id = "hero"
+
         return cell
     }
     
@@ -75,7 +80,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        
+        detailVC.photo = photos[indexPath.row]
+        detailVC.you = self
+        hero.replaceViewController(with: detailVC)
+        
+        
+        /*
         detailVC.photo = photos[indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
+        */
     }
 }

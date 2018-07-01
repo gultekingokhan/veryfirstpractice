@@ -9,5 +9,6 @@ use_frameworks!
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SDWebImage'
+pod 'Hero'
 
 end

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +15,7 @@
                 <outlet property="descriptionLabel" destination="sOu-dY-oIn" id="rcz-ID-eZ6"/>
                 <outlet property="fullnameLabel" destination="70O-Rz-tLg" id="Ffh-t2-sqN"/>
                 <outlet property="photoView" destination="knd-5t-MGU" id="Ktv-FT-8ye"/>
+                <outlet property="searchContainerView" destination="PKm-2v-i8u" id="gBl-Rn-7jt"/>
                 <outlet property="userImageView" destination="Mdu-ZM-6TA" id="5MP-6a-XRm"/>
                 <outlet property="usernameLabel" destination="3oa-CZ-fq9" id="bQb-H2-ZJU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -64,7 +63,7 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-xx-V0y" customClass="ShadowedView" customModule="veryfirstpractice" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-xx-V0y">
                     <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-ZM-6TA" customClass="RoundedImageView" customModule="veryfirstpractice" customModuleProvider="target">
@@ -106,12 +105,33 @@
                         <constraint firstItem="Mdu-ZM-6TA" firstAttribute="top" secondItem="6bv-xx-V0y" secondAttribute="top" constant="16" id="zEZ-eA-lEO"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKm-2v-i8u" customClass="ShadowedView" customModule="veryfirstpractice" customModuleProvider="target">
+                    <rect key="frame" x="315" y="607" width="40" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-icon" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-GJ-7ei">
+                            <rect key="frame" x="8" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="AhZ-Wj-lvM"/>
+                                <constraint firstAttribute="width" secondItem="2rO-GJ-7ei" secondAttribute="height" id="n2f-4B-xBE"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2rO-GJ-7ei" firstAttribute="centerX" secondItem="PKm-2v-i8u" secondAttribute="centerX" id="1xX-dd-xjE"/>
+                        <constraint firstAttribute="width" constant="40" id="6iB-uS-QTS"/>
+                        <constraint firstAttribute="height" constant="40" id="R3t-sl-KAh"/>
+                        <constraint firstItem="2rO-GJ-7ei" firstAttribute="centerY" secondItem="PKm-2v-i8u" secondAttribute="centerY" id="fcW-jL-Ya7"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="knd-5t-MGU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="00t-LU-1Wl"/>
                 <constraint firstItem="A39-JY-d1o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="791-lL-5Hi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PKm-2v-i8u" secondAttribute="bottom" constant="20" id="EO2-IS-EHa"/>
                 <constraint firstItem="6bv-xx-V0y" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="EoV-Jd-1FS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PKm-2v-i8u" secondAttribute="trailing" constant="20" id="JOI-aO-pOe"/>
                 <constraint firstItem="6bv-xx-V0y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MYA-EJ-412"/>
                 <constraint firstItem="A39-JY-d1o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Rxe-b1-TT0"/>
                 <constraint firstItem="cuQ-AS-aMH" firstAttribute="top" secondItem="knd-5t-MGU" secondAttribute="bottom" constant="16" id="UtX-hU-hMd"/>
@@ -127,4 +147,7 @@
             <point key="canvasLocation" x="-156.5" y="39.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="search-icon" width="512" height="512"/>
+    </resources>
 </document>
