@@ -4,4 +4,4 @@
 
 This is the very first practice on Github after long time.
 
-For trying it on Appetize.io, click [here](https://appetize.io/embed/4jdw2ja5cxjkvepa9gymjn17rg?device=iphone6s&scale=75&orientation=portrait&osVersion=11.4).
+For trying it on [Appetize.io](https://appetize.io), click [here](https://appetize.io/app/4jdw2ja5cxjkvepa9gymjn17rg?device=iphone6s&scale=75&orientation=portrait&osVersion=11.4).
