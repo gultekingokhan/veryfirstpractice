@@ -235,8 +235,8 @@
 				76657B2920CC055000252283 /* ViewController */,
 				76657B2820CC052E00252283 /* HomeViewController */,
 				76C1C88720CC783A00680A21 /* SearchViewController */,
-				76DADB6620CBEB9A005896E2 /* Assets.xcassets */,
 				764636D620D0143800641B3A /* DetailViewContoller */,
+				76DADB6620CBEB9A005896E2 /* Assets.xcassets */,
 				76DADB6820CBEB9A005896E2 /* LaunchScreen.storyboard */,
 				76DADB6B20CBEB9A005896E2 /* Info.plist */,
 				76DADB6320CBEB98005896E2 /* veryfirstpractice.xcdatamodeld */,
@@ -439,12 +439,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-veryfirstpractice/Pods-veryfirstpractice-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
